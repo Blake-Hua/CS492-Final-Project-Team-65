@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">Assignment 4</string>
+
+    <string name="loading_error">Unable to fetch forecast data.  Error message: %1$s</string>
+
+    <string name="forecast_date">%1$tb %1$te</string>
+    <string name="forecast_time">%1$tl:%1$tM %1$tp</string>
+    <string name="forecast_temp">%1$d°</string>
+    <string name="forecast_pop">%1$d%%</string>
+    <string name="forecast_clouds">%1$d%%</string>
+    <string name="forecast_wind">%1$d%2$s</string>
+    <string name="forecast_date_time">%1$tb %1$te, %1$tl:%1$tM %1$tp</string>
+
+    <string name="label_current_weather">Current Weather</string>
+    <string name="label_five_day_forecast">Five-Day Forecast</string>
+    <string name="label_settings">Settings</string>
+
+    <string name="action_five_day_forecast">Five-Day Forecast</string>
+    <string name="action_share">Share</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="share_weather_text">Current weather for %1$s: %2$s, %3$s</string>
+
+    <!--
+      - Preferences strings
+      -->
+    <string name="pref_category_forecast">Forecast settings</string>
+
+    <string name="pref_city_title">City</string>
+    <string name="pref_city_key" translatable="false">city</string>
+
+    <string name="pref_units_title">Weather Units</string>
+    <string name="pref_units_key" translatable="false">units</string>
+
+    <string name="pref_units_entry_imperial">Imperial (e.g. °F)</string>
+    <string name="pref_units_entry_metric">Metric (e.g. °C)</string>
+    <string name="pref_units_entry_standard">Standard (e.g. °K)</string>
+
+    <string name="pref_units_value_imperial" translatable="false">imperial</string>
+    <string name="pref_units_value_metric" translatable="false">metric</string>
+    <string name="pref_units_value_standard" translatable="false">standard</string>
+
+    <string name="pref_units_default_value">@string/pref_units_value_imperial</string>
+
+    <string name="label_previous_city">Bookmarked Repos</string>
+</resources>

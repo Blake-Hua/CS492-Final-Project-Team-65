@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="TextAppearance.WeatherApp.HighTempSmall" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="android:textColor">@color/high_temp</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+    <style name="TextAppearance.WeatherApp.LowTempSmall" parent="TextAppearance.WeatherApp.HighTempSmall">
+        <item name="android:textColor">@color/low_temp</item>
+    </style>
+    <style name="TextAppearance.WeatherApp.HighTempLarge" parent="TextAppearance.WeatherApp.HighTempSmall">
+        <item name="android:textSize">32sp</item>
+    </style>
+    <style name="TextAppearance.WeatherApp.LowTempLarge" parent="TextAppearance.WeatherApp.LowTempSmall">
+        <item name="android:textSize">32sp</item>
+    </style>
+</resources>
