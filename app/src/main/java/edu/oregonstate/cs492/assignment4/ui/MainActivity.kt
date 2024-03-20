@@ -1,5 +1,6 @@
 package edu.oregonstate.cs492.assignment4.ui
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.util.Log
 import android.view.Menu
@@ -21,6 +22,7 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import androidx.preference.PreferenceManager
 import com.google.android.material.appbar.MaterialToolbar
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
 import com.google.android.material.snackbar.Snackbar
 import edu.oregonstate.cs492.assignment4.R
@@ -57,6 +59,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var appBarConfig: AppBarConfiguration
     val cityViewModel: CityViewModel by viewModels()
 
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         enableEdgeToEdge()
         super.onCreate(savedInstanceState)
@@ -66,40 +69,43 @@ class MainActivity : AppCompatActivity() {
             R.id.nav_host_fragment
         ) as NavHostFragment
         val navController = navHostFragment.navController
-        val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
-        appBarConfig = AppBarConfiguration(navController.graph, drawerLayout)
+//        val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
+        appBarConfig = AppBarConfiguration(navController.graph)
 
         val appBar: MaterialToolbar = findViewById(R.id.top_app_bar)
         setSupportActionBar(appBar)
         setupActionBarWithNavController(navController, appBarConfig)
 
-        findViewById<NavigationView>(R.id.nav_view).setupWithNavController(navController)
-        addEntriesToNavDrawer()
+//        findViewById<NavigationView>(R.id.nav_view).setupWithNavController(navController)
+//        addEntriesToNavDrawer()
+
+        val bottomNav: BottomNavigationView = findViewById(R.id.bottom_nav)
+        bottomNav.setupWithNavController(navController)
 
         /*
          * Set up a MenuProvider to provide and handle app bar actions for all screens under this
          * activity.
          */
-        addMenuProvider(
-            object : MenuProvider {
-                override fun onCreateMenu(menu: Menu, menuInflater: MenuInflater) {
-                    menuInflater.inflate(R.menu.main_menu, menu)
-                }
-
-                override fun onMenuItemSelected(menuItem: MenuItem): Boolean {
-                    return when (menuItem.itemId) {
-                        R.id.action_settings -> {
-                            findNavController(R.id.nav_host_fragment).navigate(R.id.settings)
-                            true
-                        }
-                        else -> false
-                    }
-                }
-
-            },
-            this,
-            Lifecycle.State.STARTED
-        )
+//        addMenuProvider(
+//            object : MenuProvider {
+//                override fun onCreateMenu(menu: Menu, menuInflater: MenuInflater) {
+//                    menuInflater.inflate(R.menu.main_menu, menu)
+//                }
+//
+//                override fun onMenuItemSelected(menuItem: MenuItem): Boolean {
+//                    return when (menuItem.itemId) {
+//                        R.id.action_settings -> {
+//                            findNavController(R.id.nav_host_fragment).navigate(R.id.settings)
+//                            true
+//                        }
+//                        else -> false
+//                    }
+//                }
+//
+//            },
+//            this,
+//            Lifecycle.State.STARTED
+//        )
     }
 
     override fun onSupportNavigateUp(): Boolean {

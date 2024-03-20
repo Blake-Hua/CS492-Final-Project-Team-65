@@ -11,8 +11,8 @@
     <string name="forecast_wind">%1$d%2$s</string>
     <string name="forecast_date_time">%1$tb %1$te, %1$tl:%1$tM %1$tp</string>
 
-    <string name="label_current_weather">Current Weather</string>
-    <string name="label_five_day_forecast">Five-Day Forecast</string>
+    <string name="label_current_weather">Home</string>
+    <string name="label_five_day_forecast">Search Song</string>
     <string name="label_settings">Settings</string>
 
     <string name="action_five_day_forecast">Five-Day Forecast</string>
