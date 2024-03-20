@@ -19,13 +19,18 @@
         android:label="@string/label_five_day_forecast"
         android:name="edu.oregonstate.cs492.assignment4.ui.FiveDayForecastFragment" />
 
+<!--    <fragment-->
+<!--        android:id="@+id/track_lyrics"-->
+<!--        android:label="@string/label_five_day_forecast"-->
+<!--        android:name="edu.oregonstate.cs492.assignment4.ui.TrackDetailFragment" />-->
+
     <fragment
         android:id="@+id/track_search"
         android:name="edu.oregonstate.cs492.assignment4.ui.TrackSearchFragment"
         android:label="@string/label_track_search">
         <action
             android:id="@+id/navigate_to_lyrics"
-            app:destination="@id/current_weather" />
+            app:destination="@id/current_weather"/>
     </fragment>
 
     <fragment

@@ -1,5 +1,6 @@
 package edu.oregonstate.cs492.assignment4.ui
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -24,9 +25,11 @@ class TrackSearchViewModel : ViewModel() {
     val error: LiveData<String?> = _error
 
     fun loadMusicSearch(searchQuery: String?, page_size: String?, apiKey: String) {
+        Log.d("TrackSearchViewModel", "loadMusicSearch: $searchQuery")
         viewModelScope.launch {
             _loadingStatus.value = LoadingStatus.LOADING
             val result = repository.loadMusicSearch(searchQuery, page_size, apiKey)
+            Log.d("TrackSearchViewModel", "loadMusicSearch: $result")
 
             _searchResults.value = result.getOrNull()
             _error.value = result.exceptionOrNull()?.message

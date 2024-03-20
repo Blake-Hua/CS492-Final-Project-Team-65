@@ -99,6 +99,12 @@ class TrackSearchFragment : Fragment(R.layout.fragment_track_search) {
             Lifecycle.State.STARTED
         )
 
+        searchBtn.setOnClickListener {
+            val searchQuery = searchBoxET.text.toString()
+            val apiKey = getString(R.string.music_api_key)
+            viewModel.loadMusicSearch(searchQuery, "10", apiKey)
+        }
+
     }
 
     private fun onTrackClick(track: Track) {

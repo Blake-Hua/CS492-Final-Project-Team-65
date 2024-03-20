@@ -10,5 +10,12 @@ import com.squareup.moshi.JsonClass
 
 @JsonClass(generateAdapter = true)
 data class TrackResults(
-    @Json(name = "track_list") val trackList: List<Track>
+    @Json(name = "message") val message: Message,
+    val trackList: List<Track> = message.body.track_list.map { it.track }
+
 )
+//    val trackList : List<Track> = body.track_list
+//    @Json(name = "track_list") val trackList: List<Track>
+
+//track_id misssing at
+// message.body.track_list[1]

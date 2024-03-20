@@ -1,0 +1,8 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+<<<<<<< HEAD
+=======
+# GitHub Copilot persisted chat sessions
+/copilot/chatSessions
+>>>>>>> 23699b26aa0e406efe732ce9d00b09add01a2791
