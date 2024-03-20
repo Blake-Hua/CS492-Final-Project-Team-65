@@ -21,6 +21,16 @@
 
     <string name="share_weather_text">Current weather for %1$s: %2$s, %3$s</string>
 
+
+    <string name="search_hint">Song name ..</string>
+    <string name="search">Search</string>
+    <string name="search_error">
+      Error fetching search results: %1$s
+    </string>
+
+    <string name="label_track_search">Track Search</string>
+
+
     <!--
       - Preferences strings
       -->

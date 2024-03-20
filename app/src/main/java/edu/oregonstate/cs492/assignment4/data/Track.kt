@@ -141,6 +141,20 @@ data class MusicGenreData(
     val music_genre_vanity: String
 )
 
+@JsonClass(generateAdapter = true)
+data class Message(
+    val body: TrackBody
+)
+
+@JsonClass(generateAdapter = true)
+data class TrackBody(
+    val track_list: List<TrackListItem>
+)
+@JsonClass(generateAdapter = true)
+class TrackListItem(
+    val track: Track
+)
+
 class MusicTrackJsonAdapter {
     @FromJson
     fun trackFromJson(track: TrackJson) = Track(

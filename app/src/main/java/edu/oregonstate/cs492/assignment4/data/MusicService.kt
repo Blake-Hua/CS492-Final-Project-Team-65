@@ -1,5 +1,6 @@
 package edu.oregonstate.cs492.assignment4.data
 
+import android.util.Log
 import com.squareup.moshi.Moshi
 import retrofit2.Response
 import retrofit2.Retrofit
@@ -23,7 +24,7 @@ interface MusicService {
     ) : Response<TrackResults>
 
     companion object {
-        private const val BASE_URL = "http://api.musixmatch.com/ws/1.1/"
+        private const val BASE_URL = "https://api.musixmatch.com/ws/1.1/"
 
         /**
          * This method can be called as `OpenWeatherService.create()` to create an object
@@ -31,6 +32,7 @@ interface MusicService {
          * the OpenWeather API.
          */
         fun create() : MusicService {
+            Log.d("MusicService", "create")
             val moshi = Moshi.Builder()
                 .add(MusicTrackJsonAdapter())
                 .build()
