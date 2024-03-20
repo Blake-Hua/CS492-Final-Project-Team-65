@@ -27,6 +27,7 @@ android {
          * MainActivity.kt.
          */
         resValue("string", "openweather_api_key", properties["OPENWEATHER_API_KEY"]?.toString() ?: "")
+        resValue("string", "music_api_key", properties["MUSIC_API_KEY"]?.toString() ?: "")
     }
 
     buildTypes {
