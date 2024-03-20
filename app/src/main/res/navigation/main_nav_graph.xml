@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/current_weather"
         android:label="@string/label_current_weather"
-        android:name="edu.oregonstate.cs492.assignment4.ui.CurrentWeatherFragment">
+        android:name="edu.oregonstate.cs492.assignment4.ui.MediaPlayerFragment">
         <action
             android:id="@+id/navigate_to_five_day_forecast"
             app:destination="@id/five_day_forecast"/>
