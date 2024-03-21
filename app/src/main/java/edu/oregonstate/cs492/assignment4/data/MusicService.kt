@@ -28,7 +28,7 @@ interface MusicService {
     suspend fun getTrackLyrics(
         @Query("track_id") trackId: Int,
         @Query("apikey") apiKey: String
-    ) : Response<LyricsResponse>
+    ) : Response<Lyrics>
 
     companion object {
         private const val BASE_URL = "https://api.musixmatch.com/ws/1.1/"
@@ -42,7 +42,6 @@ interface MusicService {
             Log.d("MusicService", "create")
             val moshi = Moshi.Builder()
                 .add(MusicTrackJsonAdapter())
-                .add(LyricsJsonAdapter())
                 .build()
             return Retrofit.Builder()
                 .baseUrl(BASE_URL)

@@ -108,8 +108,8 @@ class TrackSearchFragment : Fragment(R.layout.fragment_track_search) {
     }
 
     private fun onTrackClick(track: Track) {
-        val directions = TrackSearchFragmentDirections.navigateToLyrics()
-//        val directions = TrackSearchFragmentDirections.navigateToLyrics(track.track_id)
+//        val directions = TrackSearchFragmentDirections.navigateToLyrics()
+        val directions = TrackSearchFragmentDirections.navigateToLyrics(track.track_id)
         findNavController().navigate(directions)
     }
 

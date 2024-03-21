@@ -18,9 +18,9 @@
         android:id="@+id/lyrics"
         android:label="Lyrics"
         android:name="edu.oregonstate.cs492.assignment4.ui.TrackLyricsFragment" >
-<!--        <argument-->
-<!--            android:name="trackId"-->
-<!--            app:argType="integer" />-->
+        <argument
+            android:name="track"
+            app:argType="integer"/>
     </fragment>
 
     <fragment
