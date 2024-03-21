@@ -14,6 +14,7 @@ class TrackSearchRepository(
 
     suspend fun loadMusicSearch(
         searchQuery: String?,
+        searchArtist: String?,
         page_size: String?,
         apiKey: String
     ) : Result<TrackResults?> {
@@ -22,7 +23,7 @@ class TrackSearchRepository(
             Log.d("TrackSearchRepository", "loadMusicSearch: $searchQuery")
             try { // I'm using the API http://api.musixmatch.com/ws/1.1/track.search to get a list of tracks based on
                 // the user query.
-                val response = service.loadMusicSearch(searchQuery, page_size, apiKey)
+                val response = service.loadMusicSearch(searchQuery, searchArtist, page_size, apiKey)
                 Log.d("TrackSearchRepository", "loadMusicSearch: $response")
                 if (response.isSuccessful) {
                     val body = response.body()

@@ -20,6 +20,7 @@ interface MusicService {
     @GET("track.search")
     suspend fun loadMusicSearch(
         @Query("q_track") searchQuery: String?,
+        @Query("q_artist") searchArtist: String?,
         @Query("page_size") page_size: String?,
         @Query("apikey") apiKey: String
     ) : Response<TrackResults>

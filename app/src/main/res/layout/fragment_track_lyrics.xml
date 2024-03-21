@@ -9,8 +9,7 @@
         android:id="@+id/tv_lyrics"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?attr/textAppearanceHeadline4"
-        android:layout_marginBottom="2dp" />
+        android:textSize="16sp"/>
 
 
 </LinearLayout>

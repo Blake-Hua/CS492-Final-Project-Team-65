@@ -22,6 +22,20 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginHorizontal="8dp"
+        android:hint="Artist name .."
+        app:startIconDrawable="@drawable/ic_baseline_person_24">
+    <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_search_box_artist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
     <Button
         android:id="@+id/btn_search"
         android:layout_width="match_parent"

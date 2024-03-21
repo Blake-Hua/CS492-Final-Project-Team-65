@@ -9,9 +9,6 @@
         android:id="@+id/media_player"
         android:label="@string/label_current_weather"
         android:name="edu.oregonstate.cs492.assignment4.ui.MediaPlayerFragment">
-<!--        <action-->
-<!--            android:id="@+id/navigate_to_five_day_forecast"-->
-<!--            app:destination="@id/track_search"/>-->
     </fragment>
 
     <fragment

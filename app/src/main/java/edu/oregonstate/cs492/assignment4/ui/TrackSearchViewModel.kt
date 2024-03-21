@@ -24,11 +24,11 @@ class TrackSearchViewModel : ViewModel() {
     private val _error = MutableLiveData<String?>(null)
     val error: LiveData<String?> = _error
 
-    fun loadMusicSearch(searchQuery: String?, page_size: String?, apiKey: String) {
+    fun loadMusicSearch(searchQuery: String?, searchArtist: String?, page_size: String?, apiKey: String) {
         Log.d("TrackSearchViewModel", "loadMusicSearch: $searchQuery")
         viewModelScope.launch {
             _loadingStatus.value = LoadingStatus.LOADING
-            val result = repository.loadMusicSearch(searchQuery, page_size, apiKey)
+            val result = repository.loadMusicSearch(searchQuery, searchArtist, page_size, apiKey)
             Log.d("TrackSearchViewModel", "loadMusicSearch: $result")
 
             _searchResults.value = result.getOrNull()

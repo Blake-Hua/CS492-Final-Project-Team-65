@@ -1,5 +1,7 @@
 package edu.oregonstate.cs492.assignment4.ui
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.text.TextUtils
 import android.view.Menu
@@ -36,6 +38,7 @@ class TrackSearchFragment : Fragment(R.layout.fragment_track_search) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        val searchBoxArtist: EditText = view.findViewById(R.id.et_search_box_artist)
         val searchBoxET: EditText = view.findViewById(R.id.et_search_box)
         val searchBtn: Button = view.findViewById(R.id.btn_search)
 
@@ -100,17 +103,26 @@ class TrackSearchFragment : Fragment(R.layout.fragment_track_search) {
 //        )
 
         searchBtn.setOnClickListener {
+            val searchArtist = searchBoxArtist.text.toString()
             val searchQuery = searchBoxET.text.toString()
             val apiKey = getString(R.string.music_api_key)
-            viewModel.loadMusicSearch(searchQuery, "10", apiKey)
+            viewModel.loadMusicSearch(searchQuery, searchArtist,"10", apiKey)
         }
 
     }
 
     private fun onTrackClick(track: Track) {
+        val url = track.track_share_url
+        if (url.isNotEmpty()) {
+            val intent = Intent(Intent.ACTION_VIEW)
+            intent.data = Uri.parse(url)
+            startActivity(intent)
+        } else {
+            // Optionally handle the case where there is no URL (e.g., show a message)
+        }
 //        val directions = TrackSearchFragmentDirections.navigateToLyrics()
-        val directions = TrackSearchFragmentDirections.navigateToLyrics(track.track_id)
-        findNavController().navigate(directions)
+//        val directions = TrackSearchFragmentDirections.navigateToLyrics(track.track_id)
+//        findNavController().navigate(directions)
     }
 
 }

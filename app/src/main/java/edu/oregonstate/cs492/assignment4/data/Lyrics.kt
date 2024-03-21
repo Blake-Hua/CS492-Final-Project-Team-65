@@ -56,11 +56,11 @@ data class Body(
 
 @JsonClass(generateAdapter = true)
 data class Lyrics(
-    @Json(name = "lyrics_id") val lyricsId: Int,
-    @Json(name = "explicit") val explicit: Int,
-    @Json(name = "lyrics_body") val lyricsBody: String,
+    @Json(name = "lyrics_id") val lyricsId: Int?,
+    @Json(name = "explicit") val explicit: Int?,
+    @Json(name = "lyrics_body") val lyricsBody: String?,
     @Json(name = "script_tracking_url") val scriptTrackingUrl: String?,
     @Json(name = "pixel_tracking_url") val pixelTrackingUrl: String?,
-    @Json(name = "lyrics_copyright") val lyricsCopyright: String,
-    @Json(name = "updated_time") val updatedTime: String
+    @Json(name = "lyrics_copyright") val lyricsCopyright: String?,
+    @Json(name = "updated_time") val updatedTime: String?
 )

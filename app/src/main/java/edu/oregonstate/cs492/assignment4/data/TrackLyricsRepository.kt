@@ -19,6 +19,7 @@ class TrackLyricsRepository (
                 Log.d("TrackLyricsRepository", "loadTrackLyrics: $response")
                 if (response.isSuccessful) {
                     val body = response.body()
+                    Log.d("TrackLyricsRepository", "loadTrackLyrics: $body")
                     if (body != null) {
                         Result.success(body)
                     } else {
