@@ -34,17 +34,17 @@
     <!--
       - Preferences strings
       -->
-    <string name="pref_category_forecast">Forecast settings</string>
+    <string name="pref_category_forecast">App Settings</string>
 
-    <string name="pref_city_title">City</string>
-    <string name="pref_city_key" translatable="false">city</string>
+<!--    <string name="pref_city_title">City</string>-->
+<!--    <string name="pref_city_key" translatable="false">city</string>-->
 
-    <string name="pref_units_title">Weather Units</string>
+    <string name="pref_units_title">Background Mode</string>
     <string name="pref_units_key" translatable="false">units</string>
 
-    <string name="pref_units_entry_imperial">Imperial (e.g. °F)</string>
-    <string name="pref_units_entry_metric">Metric (e.g. °C)</string>
-    <string name="pref_units_entry_standard">Standard (e.g. °K)</string>
+    <string name="pref_units_entry_imperial">Default</string>
+    <string name="pref_units_entry_metric">Dark Background</string>
+    <string name="pref_units_entry_standard">Light Background</string>
 
     <string name="pref_units_value_imperial" translatable="false">imperial</string>
     <string name="pref_units_value_metric" translatable="false">metric</string>

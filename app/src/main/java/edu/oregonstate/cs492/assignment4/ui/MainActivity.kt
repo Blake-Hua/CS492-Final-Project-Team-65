@@ -125,13 +125,13 @@ class MainActivity : AppCompatActivity() {
 //    This will likely be easiest if all of the cities in the NavigationView live within their own SubMenu.
 
 
-    private fun updateCityPreference(city: String) {
-        val sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this)
-        with(sharedPrefs.edit()) {
-            putString(getString(R.string.pref_city_key), city)
-            apply()
-        }
-    }
+//    private fun updateCityPreference(city: String) {
+//        val sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this)
+//        with(sharedPrefs.edit()) {
+//            putString(getString(R.string.pref_city_key), city)
+//            apply()
+//        }
+//    }
 
 private fun addEntriesToNavDrawer() {
 //        val entries = listOf(
@@ -157,7 +157,7 @@ private fun addEntriesToNavDrawer() {
                 cityViewModel.updateLastViewed(savedCity)
 
                 // Update SharedPreferences with the selected city
-                updateCityPreference(savedCity.cityName)
+//                updateCityPreference(savedCity.cityName)
 
                 // Navigate to the "current weather" screen
                 val navController = findNavController(R.id.nav_host_fragment)

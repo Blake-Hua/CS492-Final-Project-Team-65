@@ -96,17 +96,17 @@ class FiveDayForecastFragment: Fragment(R.layout.fragment_five_day_forecast) {
 
         val prefs = PreferenceManager.getDefaultSharedPreferences(requireContext())
 
-        val city = prefs.getString(getString(R.string.pref_city_key), "Corvallis,OR,US")
+//        val city = prefs.getString(getString(R.string.pref_city_key), "Corvallis,OR,US")
         val units = prefs.getString(
             getString(R.string.pref_units_key),
             getString(R.string.pref_units_default_value)
         )
         // define the city data class instance here using the city variable
-        val cityData = City(city.toString(), System.currentTimeMillis().toString())
-        Log.d("FiveDayForecast", "Inserting city $cityData")
-        cityViewModel.insertCity(cityData)
-
-        viewModel.loadFiveDayForecast(city, units, getString(R.string.openweather_api_key))
-        cityTV.text = city
+//        val cityData = City(city.toString(), System.currentTimeMillis().toString())
+//        Log.d("FiveDayForecast", "Inserting city $cityData")
+//        cityViewModel.insertCity(cityData)
+//
+//        viewModel.loadFiveDayForecast(city, units, getString(R.string.openweather_api_key))
+//        cityTV.text = city
     }
 }

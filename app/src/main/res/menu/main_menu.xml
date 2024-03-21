@@ -9,4 +9,9 @@
 <!--        android:icon="@drawable/ic_action_settings"-->
 <!--        app:showAsAction="never" />-->
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="pref_units_entry_imperial" />
 </menu>
