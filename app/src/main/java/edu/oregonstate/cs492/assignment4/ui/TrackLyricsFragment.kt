@@ -1,5 +1,8 @@
 package edu.oregonstate.cs492.assignment4.ui
 
+import android.content.ActivityNotFoundException
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -21,6 +24,8 @@ class TrackLyricsFragment : Fragment(R.layout.fragment_track_lyrics) {
 
     private lateinit var lyricsTV: TextView
 
+    var lyricsUrl: String? = null;
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -33,7 +38,18 @@ class TrackLyricsFragment : Fragment(R.layout.fragment_track_lyrics) {
         viewModel.lyrics.observe(viewLifecycleOwner) { lyrics ->
             if (lyrics != null) {
                 lyricsTV.text = lyrics.lyricsBody
+                lyricsUrl = lyrics.scriptTrackingUrl
             }
+        }
+
+    }
+    private fun viewOnMusic() {
+        val url = Uri.parse(lyricsUrl)
+        val intent = Intent(Intent.ACTION_VIEW, url)
+        try {
+            startActivity(intent)
+        } catch (e: ActivityNotFoundException) {
+            /* Handle activity not found */
         }
     }
 
