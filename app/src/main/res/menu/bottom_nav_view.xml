@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/current_weather"
+        android:id="@+id/media_player"
         android:title="Media Player"
         android:icon="@drawable/ic_action_media_player" />
     <item

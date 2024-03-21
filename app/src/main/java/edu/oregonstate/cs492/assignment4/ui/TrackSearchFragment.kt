@@ -78,26 +78,26 @@ class TrackSearchFragment : Fragment(R.layout.fragment_track_search) {
         }
 
         val menuHost: MenuHost = requireActivity()
-        menuHost.addMenuProvider(
-            object : MenuProvider {
-                override fun onCreateMenu(menu: Menu, menuInflater: MenuInflater) {
-                    menuInflater.inflate(R.menu.track_search_menu , menu)
-                }
-
-                override fun onMenuItemSelected(menuItem: MenuItem): Boolean {
-                    return when (menuItem.itemId) {
-                        R.id.action_bookmarks -> {
-                            val directions = TrackSearchFragmentDirections.navigateToLyrics()
-                            findNavController().navigate(directions)
-                            true
-                        }
-                        else -> false
-                    }
-                }
-            },
-            viewLifecycleOwner,
-            Lifecycle.State.STARTED
-        )
+//        menuHost.addMenuProvider(
+//            object : MenuProvider {
+//                override fun onCreateMenu(menu: Menu, menuInflater: MenuInflater) {
+//                    menuInflater.inflate(R.menu.track_search_menu , menu)
+//                }
+//
+//                override fun onMenuItemSelected(menuItem: MenuItem): Boolean {
+//                    return when (menuItem.itemId) {
+//                        R.id.action_bookmarks -> {
+//                            val directions = TrackSearchFragmentDirections.navigateToLyrics()
+//                            findNavController().navigate(directions)
+//                            true
+//                        }
+//                        else -> false
+//                    }
+//                }
+//            },
+//            viewLifecycleOwner,
+//            Lifecycle.State.STARTED
+//        )
 
         searchBtn.setOnClickListener {
             val searchQuery = searchBoxET.text.toString()
@@ -109,6 +109,7 @@ class TrackSearchFragment : Fragment(R.layout.fragment_track_search) {
 
     private fun onTrackClick(track: Track) {
         val directions = TrackSearchFragmentDirections.navigateToLyrics()
+//        val directions = TrackSearchFragmentDirections.navigateToLyrics(track.track_id)
         findNavController().navigate(directions)
     }
 

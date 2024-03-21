@@ -41,6 +41,7 @@ class TrackResultsAdapter(
         onClick: (Track) -> Unit
         ) : RecyclerView.ViewHolder(itemView) {
         private val trackNameTV: TextView = itemView.findViewById(R.id.tv_track_name)
+//        private val artistNameTV: TextView = itemView.findViewById(R.id.tv_artist_name)
         private lateinit var currentTrack: Track
 
 //        implement these itemViews once I confirm trackname can be displayed
@@ -60,6 +61,7 @@ class TrackResultsAdapter(
             currentTrack = track
 
             trackNameTV.text = track.track_name
+//            artistNameTV.text = track.artist_name
 //            artistNameTV.text = track.artist
 //            albumNameTV.text = track.album
 

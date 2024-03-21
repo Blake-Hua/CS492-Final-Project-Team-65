@@ -13,4 +13,12 @@
         android:paddingVertical="32dp"
         android:paddingHorizontal="16dp"/>
 
+<!--    <TextView-->
+<!--        android:id="@+id/tv_artist_name"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:textAppearance="?attr/textAppearanceHeadline5"-->
+<!--        android:paddingVertical="32dp"-->
+<!--        android:paddingHorizontal="16dp"/>-->
+
 </com.google.android.material.card.MaterialCardView>

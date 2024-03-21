@@ -8,7 +8,31 @@
             <LayoutPositions>
               <option name="myPositions">
                 <map>
-                  <entry key="current_weather">
+                  <entry key="five_day_forecast">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="292" />
+                            <option name="y" value="432" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="lyrics">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="12" />
+                            <option name="y" value="12" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="media_player">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">
@@ -29,36 +53,12 @@
                       </LayoutPositions>
                     </value>
                   </entry>
-                  <entry key="five_day_forecast">
-                    <value>
-                      <LayoutPositions>
-                        <option name="myPosition">
-                          <Point>
-                            <option name="x" value="292" />
-                            <option name="y" value="432" />
-                          </Point>
-                        </option>
-                      </LayoutPositions>
-                    </value>
-                  </entry>
                   <entry key="navigate_to_settings">
                     <value>
                       <LayoutPositions />
                     </value>
                   </entry>
                   <entry key="settings">
-                    <value>
-                      <LayoutPositions>
-                        <option name="myPosition">
-                          <Point>
-                            <option name="x" value="12" />
-                            <option name="y" value="12" />
-                          </Point>
-                        </option>
-                      </LayoutPositions>
-                    </value>
-                  </entry>
-                  <entry key="track">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">

@@ -3,26 +3,25 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/main_nav_graph"
-    app:startDestination="@id/current_weather">
+    app:startDestination="@id/media_player">
 
     <fragment
-        android:id="@+id/current_weather"
+        android:id="@+id/media_player"
         android:label="@string/label_current_weather"
         android:name="edu.oregonstate.cs492.assignment4.ui.MediaPlayerFragment">
-        <action
-            android:id="@+id/navigate_to_five_day_forecast"
-            app:destination="@id/five_day_forecast"/>
+<!--        <action-->
+<!--            android:id="@+id/navigate_to_five_day_forecast"-->
+<!--            app:destination="@id/track_search"/>-->
     </fragment>
 
     <fragment
-        android:id="@+id/five_day_forecast"
-        android:label="@string/label_five_day_forecast"
-        android:name="edu.oregonstate.cs492.assignment4.ui.FiveDayForecastFragment" />
-
-<!--    <fragment-->
-<!--        android:id="@+id/track_lyrics"-->
-<!--        android:label="@string/label_five_day_forecast"-->
-<!--        android:name="edu.oregonstate.cs492.assignment4.ui.TrackDetailFragment" />-->
+        android:id="@+id/lyrics"
+        android:label="Lyrics"
+        android:name="edu.oregonstate.cs492.assignment4.ui.TrackLyricsFragment" >
+<!--        <argument-->
+<!--            android:name="trackId"-->
+<!--            app:argType="integer" />-->
+    </fragment>
 
     <fragment
         android:id="@+id/track_search"
@@ -30,7 +29,11 @@
         android:label="@string/label_track_search">
         <action
             android:id="@+id/navigate_to_lyrics"
-            app:destination="@id/current_weather"/>
+            app:destination="@id/lyrics"/>
+<!--            <argument-->
+<!--                android:name="trackId"-->
+<!--                app:argType="integer" />-->
+<!--        </action>-->
     </fragment>
 
     <fragment
